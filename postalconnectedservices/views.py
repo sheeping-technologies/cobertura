@@ -18,7 +18,7 @@ DHL = 'DHL'
 
 class PostalConnectedServicesViewSet(DefaultMixins, viewsets.ModelViewSet):
     serializer_class = PostalConnectedServiceSerializer
-    queryset = PostalConnectedService.objects.all()
+    queryset = PostalConnectedService.objects.all().order_by('-created')
 
 
 class ZipCodeDetails(DefaultMixins, APIView):
