@@ -14,8 +14,8 @@ class ZipCodeSerializer(serializers.Serializer):
 
 
 class PostalConnectedServiceSerializer(serializers.ModelSerializer):
-    # postal_code = serializers.StringRelatedField()
-    # service = serializers.StringRelatedField()
+    postal_code = serializers.StringRelatedField()
+    service = serializers.StringRelatedField()
 
     class Meta:
         model = PostalConnectedService
